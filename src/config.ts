@@ -30,7 +30,7 @@ const schema = z.object({
   BRAIN: z.enum(["claude", "gemini", "offline"]).default("claude"),
   // Cérebro alternativo: Gemini (Google AI Studio). Ligue com BRAIN=gemini e a chave abaixo.
   GEMINI_API_KEY: z.string().default(""),
-  GEMINI_MODEL: z.string().default("gemini-2.0-flash"),
+  GEMINI_MODEL: z.string().default("gemini-2.5-flash"),
   // Envio humanizado: "digitando" e espera entre as mensagens (false nos testes)
   HUMAN_DELAY: z.string().optional().transform((v) => v !== "false"),
 
